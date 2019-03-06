@@ -8,19 +8,27 @@
 <h3>Chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1</h3>
 <h3>Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </h3>
 <script>
-    let num = prompt('Enter a number :');
-    while( num != -1 ){
-        let tong = 0 ;
-        for(var i =0;i<= num;i++){
-            tong = tong + i ;
+    var a;
+    var tong = 0;
+    while ( a !== -1){
+        a = parseInt(prompt('nhap a : '));
+        if (a === -1 ) break;
+        tong = tong + a;
+    }
+    document.write(tong);
+    /* cach 2
+    
+    var a = parseInt(prompt('nhap a : '));
+    var tong = 0;
+    while ( a !== -1){
 
-        }
-        alert(' So nhap la :' + num + ' Tong la : ' + tong);
-        document.write(' So nhap la :' + num + ' Tong la : ' + tong);
-        break;
+        tong = tong + a;
+        var a = parseInt(prompt('nhap a : '));
 
     }
+    document.write(tong);
 
+    * */
 
 </script>
 </body>
